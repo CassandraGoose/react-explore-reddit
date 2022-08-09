@@ -1,4 +1,5 @@
 import './App.css';
+import Posts from './Posts.js';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
           Reddit Reader Example
         </h1>
       </header>
+      <Posts />
     </div>
   );
 }

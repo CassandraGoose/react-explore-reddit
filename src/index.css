@@ -5,3 +5,16 @@ body {
     sans-serif;
 }
 
+.posts {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+}
+
+.post {
+  background-color: rgba(194, 193, 193, 0.407);
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2%;
+}
