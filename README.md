@@ -4,11 +4,11 @@ This app is a study in React, specifically React hooks, the context API, and Rea
 
 ## Features: 
 - a user can see the first page of the most popular posts from a subreddit by selected timeframe
-- a user can select from a curated list of subreddits
-- a user can select from a set of timeframes
+- (stretch) a user can select from a curated list of subreddits
+- (stretch) a user can select from a set of timeframes
 - a user can access several pages of posts
 - a user can see an individual post
-- a user can view comments (can be broken down more because woof)
+- (stretch) a user can view comments (can be broken down more because woof)
 
 ## There are several branches available as examples of each concept, listed below: 
 - [main]: this branch completes the features utilizing hooks in React and that's all.
