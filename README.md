@@ -11,7 +11,7 @@ This app is a study in React, specifically React hooks, the context API, and Rea
 - a user can view comments (can be broken down more because woof)
 
 ## There are several branches available as examples of each concept, listed below: 
-- [basic-hooks]: this branch completes the features utilizing hooks in React and that's all.
+- [main]: this branch completes the features utilizing hooks in React and that's all.
 - [hooks-with-ts]: this branch completes the features utilizing hooks in React with TypeScript
 - [hooks-with-context]: this branch completes the features utilizing hooks and the context API
 - [hooks-with-context-and-ts]: this branch completes the features utilizing hooks, the context API, and TypeScript 
@@ -22,5 +22,5 @@ To explore various popular ways of developing
 ## To use:
 - clone repo
 - `npm i` in repo
-- check out desired branch - there is nothing on `main`.
+- check out desired branch
 - `npm start`

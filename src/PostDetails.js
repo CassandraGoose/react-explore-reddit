@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import useFetch from './useFetch.js';
+import useFetch from "./useFetch.js";
 
 function PostDetails() {
   const permalink = useLocation().state.permalink;
@@ -14,27 +14,35 @@ function PostDetails() {
   }
 
   function renderMedia(post) {
-    return post.media ? <p>This post has a video, you'll have to check it out on <a href={link}>Reddit</a></p> : <img src={post.url} alt="idk"/>;
+    return post.media ? <p>This post has a video, you'll have to check it out on <a href={link}>Reddit</a></p> : (
+      <img className="detailed-post-image" src={post.url} alt="idk" />
+    );
   }
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
-  if (data) return (
-    <article className="gutters flex spaced">
-      <div>
-        <p className="post-title">{post.title}</p>
-        {post.over_18 && <p class="nsfw">this post is nsfw</p>}
+  if (data)
+    return (
+      <article className="gutters flex spaced">
         <div>
-          {post.all_awardings.map((award) => <img key={award.id} className="detailed-post-award-image" src={award.icon_url} alt={award.description} />)}
+          <p className="post-title">{post.title}</p>
+          {post.over_18 && <p class="nsfw">this post is nsfw</p>}
+          <div>
+            {post.all_awardings.map((award) => (
+              <img
+                key={award.id}
+                className="detailed-post-award-image"
+                src={award.icon_url}
+                alt={award.description}
+              />
+            ))}
+          </div>
+          <p className="post-author">{post.author}</p>
+          <p>{date.toLocaleString("en-US")}</p>
         </div>
-        <p className="post-author">{post.author}</p>
-        <p>{date.toLocaleString("en-US")}</p>
-      </div>
-      <div>
         {renderMedia(post)}
-      </div>
-    </article>
-  );
+      </article>
+    );
 }
 
 export default PostDetails;
